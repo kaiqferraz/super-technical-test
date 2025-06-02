@@ -5,25 +5,17 @@ Given("que o usuário acessa a tela inicial", () => {
   cy.visit(Cypress.env("BASE_URL"));
 });
 
-When("o usuário aceita todos os cookies", () => {
+And("aceita os cookies e fecha o iframe de oportunidades", () => {
   cy.wait(2000);
-  consultaPorEventoCarros.aceitaCookies();
+  cy.fecharIframes();
 });
 
-And("fecha a tela de oportunidades", () => {
-  cy.wait(2000);
-  consultaPorEventoCarros.fechaIframeOportunidades();
-});
-
-When("o usuário digita Carros no campo de busca", () => {
+When("realiza uma busca pelo termo Carros", () => {
   consultaPorEventoCarros.realizaPesquisa().type("Carros");
-});
-
-And("clica no botão de pesquisa", () => {
   consultaPorEventoCarros.btnPesquisar();
 });
 
-And("o usuario acessa o primeiro evento da lista", () => {
+And("acessa o primeiro evento listado", () => {
   consultaPorEventoCarros.consultaEvento();
 });
 

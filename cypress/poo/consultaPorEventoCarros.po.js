@@ -1,12 +1,4 @@
 class consultaPorEventoCarros {
-  aceitaCookies() {
-    return cy.get("#onetrust-accept-btn-handler").click();
-  }
-
-  fechaIframeOportunidades() {
-    return cy.get(".gcap-close").click();
-  }
-
   realizaPesquisa() {
     return cy.get("#search-input-field");
   }
