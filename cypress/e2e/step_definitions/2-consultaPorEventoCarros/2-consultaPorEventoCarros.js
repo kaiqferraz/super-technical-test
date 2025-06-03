@@ -1,5 +1,5 @@
 import { Given, When, And } from "cypress-cucumber-preprocessor/steps";
-import consultaPorEventoCarros from "../../../poo/consultaPorEventoCarros.po";
+import consultaPorEventoCarros from "../../../poo/2-consultaPorEventoCarros.po";
 
 Given("que o usuário acessa a tela inicial", () => {
   cy.visit(Cypress.env("BASE_URL"));
@@ -20,6 +20,6 @@ And("acessa o primeiro evento listado", () => {
 });
 
 Then("o sistema deve exibir os dados do evento selecionado", () => {
-  cy.wait(2000);
+  cy.wait(4000);
   consultaPorEventoCarros.validaTelaEvento();
 });

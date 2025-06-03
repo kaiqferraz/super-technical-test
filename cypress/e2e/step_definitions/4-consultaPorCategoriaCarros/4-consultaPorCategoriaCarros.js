@@ -1,5 +1,5 @@
 import { Given, When, And } from "cypress-cucumber-preprocessor/steps";
-import consultaPorCategoriaCarros from "../../../poo/consultaPorCategoriaCarros.po";
+import consultaPorCategoriaCarros from "../../../poo/4-consultaPorCategoriaCarros.po";
 
 Given("que o usuário acessa a tela inicial", () => {
   cy.visit(Cypress.env("BASE_URL"));

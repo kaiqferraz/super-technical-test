@@ -1,5 +1,5 @@
 import { Given, When, And } from "cypress-cucumber-preprocessor/steps";
-import login from "../../../poo/login.po";
+import login from "../../../poo/1-login.po";
 
 Given("que o usuário acessa a página inicial", () => {
   cy.visit(Cypress.env("LOGIN_URL"));

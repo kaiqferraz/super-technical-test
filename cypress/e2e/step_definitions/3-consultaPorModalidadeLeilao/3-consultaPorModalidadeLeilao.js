@@ -1,5 +1,5 @@
 import { Given, When, And } from "cypress-cucumber-preprocessor/steps";
-import consultaPorModalidadeLeilaoPo from "../../../poo/consultaPorModalidadeLeilao.po";
+import consultaPorModalidadeLeilaoPo from "../../../poo/3-consultaPorModalidadeLeilao.po";
 
 Given("que o usuário acessa a tela inicial", () => {
   cy.visit(Cypress.env("BASE_URL"));

@@ -12,7 +12,7 @@ class consultaPorEventoCarros {
   }
 
   validaTelaEvento() {
-    cy.get("#habilitese").should("be.visible");
+    cy.get("#detailed-desc").should("be.visible");
   }
 }
 export default new consultaPorEventoCarros();
