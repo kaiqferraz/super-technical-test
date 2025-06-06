@@ -6,8 +6,7 @@ node_modules/
 dist/
 
 # Arquivos
-package-lock.json
-cypress.env.json
+
 
 # Extensoes 
 *.mp4
