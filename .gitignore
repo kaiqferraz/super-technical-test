@@ -6,7 +6,7 @@ node_modules/
 dist/
 
 # Arquivos
-
+cypress.env.json
 
 # Extensoes 
 *.mp4

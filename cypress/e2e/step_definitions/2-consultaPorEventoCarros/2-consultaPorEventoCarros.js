@@ -6,7 +6,6 @@ Given("que o usuário acessa a tela inicial", () => {
 });
 
 And("aceita os cookies e fecha o iframe de oportunidades", () => {
-  cy.wait(4000);
   cy.fecharIframes();
 });
 
