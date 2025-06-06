@@ -11,12 +11,7 @@ jobs:
         run: npm ci
 
       - name: Cypress run (Chrome)
-        uses: cypress-io/github-action@v6
-        with:
-          browser: chrome
-          start: npm start
-          wait-on: "http://localhost:3000" # ajuste conforme o endereço da sua app
-          wait-on-timeout: 120
+        run: npx cypress run --browser chrome
 
       - uses: actions/upload-artifact@v4
         if: failure()
