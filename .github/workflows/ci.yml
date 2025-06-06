@@ -6,19 +6,27 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      # Install npm dependencies, cache them correctly
-      # and run all Cypress tests
-      - name: Cypress run
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Cypress run (Chrome)
         uses: cypress-io/github-action@v6
+        with:
+          browser: chrome
+          start: npm start
+          wait-on: "http://localhost:3000" # ajuste conforme o endereço da sua app
+          wait-on-timeout: 120
+
       - uses: actions/upload-artifact@v4
-        # add the line below to store screenshots only on failures
         if: failure()
         with:
           name: cypress-screenshots
           path: cypress/screenshots
-          if-no-files-found: ignore # 'warn' or 'error' are also available, defaults to `warn`
+          if-no-files-found: ignore
+
       - uses: actions/upload-artifact@v4
         with:
           name: cypress-videos
           path: cypress/videos
-          if-no-files-found: ignore # 'warn' or 'error' are also available, defaults to `warn`
+          if-no-files-found: ignore
