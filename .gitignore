@@ -25,3 +25,4 @@ cypress.env.json
 !.vscode/launch.json
 !.vscode/extensions.json
 .history/*
+cypress.env.json
