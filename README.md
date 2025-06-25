@@ -13,7 +13,7 @@ Projeto de automação de testes utilizando [Cypress](https://www.cypress.io/) c
 
 ```bash
 git clone https://github.com/seu-usuario/superbid-technical-test.git
-cd superbid-technical-test
+cd super-technical-test
 npm install
 ```
 
